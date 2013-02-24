@@ -1,0 +1,27 @@
+{
+	"name": "buddy-watcher",
+	"description": "An event based file watching utility.",
+	"version": "0.1.0",
+	"author": "popeindustries <alex@pope-industries.com>",
+	"keywords": ["fs", "watch"],
+	"dependencies": {
+	},
+	"devDependencies": {
+		"should": "*",
+		"mocha": "*",
+		"rimraf": "*"
+	},
+	"main": "index.js",
+	"scripts": {
+		"test": "mocha --reporter spec --require should -t 40000"
+	},
+	"engines": {
+		"node": ">=0.6.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/popeindustries/buddy-watcher.git"
+	},
+  "readmeFilename": "README.md",
+	"readme": ""
+}
