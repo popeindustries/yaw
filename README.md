@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/popeindustries/buddy-watcher.png)](https://travis-ci.org/popeindustries/buddy-watcher)
+
 An event based file watching utility.
 
 ## Installation
@@ -23,5 +25,5 @@ watcher.watch('some/file/or/directory')
   })
   .on('delete', function(filepath) {
     // Handle removal of file or directory
-  })
+  });
 ```
