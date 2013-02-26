@@ -1,16 +1,16 @@
-[![Build Status](https://travis-ci.org/popeindustries/buddy-watcher.png)](https://travis-ci.org/popeindustries/buddy-watcher)
+[![Build Status](https://travis-ci.org/popeindustries/yaw.png)](https://travis-ci.org/popeindustries/yaw)
 
-An event based file watching utility.
+__Y__et __A__nother __W__atch utility. This time event based.
 
 ## Installation
 
 ```bash
-npm install buddy-watcher
+npm install yaw
 ```
 
 ## Usage
 ```javascript
-var Watcher = require('buddy-watcher');
+var Watcher = require('yaw');
 
 var watcher = new Watcher();
 watcher.watch('some/file/or/directory')

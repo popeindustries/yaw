@@ -1,6 +1,6 @@
 {
-	"name": "buddy-watcher",
-	"description": "An event based file watching utility.",
+	"name": "yaw",
+	"description": "YetAnotherWatch utility.",
 	"version": "0.1.0",
 	"author": "popeindustries <alex@pope-industries.com>",
 	"keywords": ["fs", "watch"],
@@ -20,8 +20,8 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/popeindustries/buddy-watcher.git"
+		"url": "git://github.com/popeindustries/yaw.git"
 	},
   "readmeFilename": "README.md",
-	"readme": "[![Build Status](https://travis-ci.org/popeindustries/buddy-watcher.png)](https://travis-ci.org/popeindustries/buddy-watcher)\n\nAn event based file watching utility.\n\n## Installation\n\n```bash\nnpm install buddy-watcher\n```\n\n## Usage\n```javascript\nvar Watcher = require('buddy-watcher');\n\nvar watcher = new Watcher();\nwatcher.watch('some/file/or/directory')\n  .on('error', function(err) {\n    // Handle error\n  })\n  .on('create', function(filepath, stats) {\n    // Handle new file or directory\n  })\n  .on('change', function(filepath, stats) {\n    // Handle update to file\n  })\n  .on('delete', function(filepath) {\n    // Handle removal of file or directory\n  })\n```"
+	"readme": "[![Build Status](https://travis-ci.org/popeindustries/yaw.png)](https://travis-ci.org/popeindustries/yaw)\n\nAn event based file watching utility.\n\n## Installation\n\n```bash\nnpm install yaw\n```\n\n## Usage\n```javascript\nvar Watcher = require('yaw');\n\nvar watcher = new Watcher();\nwatcher.watch('some/file/or/directory')\n  .on('error', function(err) {\n    // Handle error\n  })\n  .on('create', function(filepath, stats) {\n    // Handle new file or directory\n  })\n  .on('change', function(filepath, stats) {\n    // Handle update to file\n  })\n  .on('delete', function(filepath) {\n    // Handle removal of file or directory\n  });\n```"
 }

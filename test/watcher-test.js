@@ -4,7 +4,7 @@ var path = require('path')
 	, Watcher = require('..')
 	, watcher;
 
-describe('buddy-watcher', function () {
+describe('yaw', function () {
 	before(function() {
 		process.chdir(path.resolve(__dirname, 'fixtures'));
 	});
