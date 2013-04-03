@@ -1,7 +1,7 @@
 {
 	"name": "yaw",
 	"description": "YetAnotherWatch utility.",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"author": "popeindustries <alex@pope-industries.com>",
 	"keywords": ["fs", "watch"],
 	"dependencies": {
