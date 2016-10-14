@@ -1,6 +1,7 @@
-[![Build Status](https://travis-ci.org/popeindustries/yaw.png)](https://travis-ci.org/popeindustries/yaw)
+[![NPM Version](https://img.shields.io/npm/v/yaw.svg?style=flat)](https://npmjs.org/package/yaw)
+[![Build Status](https://img.shields.io/travis/popeindustries/yaw.svg?style=flat)](https://travis-ci.org/popeindustries/yaw)
 
-__Y__et __A__nother __W__atch utility. This time event based.
+(**Y**)et (**A**)nother (**W**)atch utility. This time event based.
 
 ## Installation
 
@@ -10,20 +11,20 @@ npm install yaw
 
 ## Usage
 ```javascript
-var Watcher = require('yaw');
+const watcherFactory = require('yaw');
+const watcher = watcherFactory();
 
-var watcher = new Watcher();
 watcher.watch('some/file/or/directory')
-  .on('error', function(err) {
+  .on('error', (err) => {
     // Handle error
   })
-  .on('create', function(filepath, stats) {
+  .on('create', (filepath, stats) => {
     // Handle new file or directory
   })
-  .on('change', function(filepath, stats) {
+  .on('change', (filepath, stats) => {
     // Handle update to file
   })
-  .on('delete', function(filepath) {
+  .on('delete', (filepath) => {
     // Handle removal of file or directory
   });
 ```

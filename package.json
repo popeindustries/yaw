@@ -1,25 +1,26 @@
 {
-	"name": "yaw",
-	"description": "YetAnotherWatch utility.",
-	"version": "0.1.1",
-	"author": "popeindustries <alex@pope-industries.com>",
-	"keywords": ["fs", "watch"],
-	"dependencies": {
-	},
-	"devDependencies": {
-		"should": "*",
-		"mocha": "*",
-		"rimraf": "*"
-	},
-	"main": "index.js",
-	"scripts": {
-		"test": "mocha --reporter spec --require should -t 40000"
-	},
-	"engines": {
-		"node": ">=0.8.0"
-	},
-	"repository": "git://github.com/popeindustries/yaw.git",
+  "name": "yaw",
+  "description": "(Y)et(A)nother(W)atch utility.",
+  "version": "0.1.1",
+  "author": "popeindustries <alex@pope-industries.com>",
+  "keywords": [
+    "fs",
+    "watch"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "expect.js": "*",
+    "mocha": "*",
+    "rimraf": "*"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test mocha --reporter spec --timeout 20000 --bail"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "repository": "git://github.com/popeindustries/yaw.git",
   "readmeFilename": "README.md",
-	"readme": "[![Build Status](https://travis-ci.org/popeindustries/yaw.png)](https://travis-ci.org/popeindustries/yaw)\n\nAn event based file watching utility.\n\n## Installation\n\n```bash\nnpm install yaw\n```\n\n## Usage\n```javascript\nvar Watcher = require('yaw');\n\nvar watcher = new Watcher();\nwatcher.watch('some/file/or/directory')\n  .on('error', function(err) {\n    // Handle error\n  })\n  .on('create', function(filepath, stats) {\n    // Handle new file or directory\n  })\n  .on('change', function(filepath, stats) {\n    // Handle update to file\n  })\n  .on('delete', function(filepath) {\n    // Handle removal of file or directory\n  });\n```",
   "license": "MIT"
 }
