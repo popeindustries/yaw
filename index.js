@@ -31,7 +31,7 @@ class Watcher extends Emitter {
    * @param {String} source
    */
   watch (source) {
-    if (RE_IGNORE.test(path.basename(source))) return;
+    if (RE_IGNORE.test(path.basename(source)) || source in this.watchers) return;
 
     fs.stat(source, (err, stats) => {
       let lastChange;
